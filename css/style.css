@@ -124,6 +124,12 @@ header.site-header .header-widgets .search-form .search-input-env {
     border-color: rgba(0, 0, 0, 0);
     background: rgba(255, 255, 255, 0.5);
 }
+.form-control-lienhe {
+  border-radius:15px;
+    border-color: rgba(0, 0, 0, 0);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.5);
+}
 .search-input {
     height: 35px;
     position: absolute;
@@ -133,6 +139,15 @@ header.site-header .header-widgets .search-form .search-input-env {
     top: -20px;
     width: 200px;
     box-shadow: none;
+    outline: none;
+}
+.your-email, .your-mes{
+    height: 35px;
+    padding-right: 43px;
+    padding-left: 20px;
+    right: 0;
+    top: -20px;
+    width: 100%;
     outline: none;
 }
 .ls-overflow-visible {
@@ -495,4 +510,15 @@ footer.site-footer .absolute-footer {
   color: rgba(0, 0, 0, 0.8);
   font-style: italic;
   letter-spacing: 0.2px;
+}
+.col-5{
+  width: 49%;
+  display:inline-block;
+}
+.but-lienhe{
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #C8BCA7;
+  border-radius: 10px;
+  border: rgba(255, 255, 255, 0);
 }
