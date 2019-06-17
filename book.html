@@ -51,7 +51,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
 
@@ -67,7 +67,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
 
@@ -83,7 +83,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_4">
@@ -98,7 +98,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_5">
@@ -113,7 +113,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_6">
@@ -128,7 +128,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_7">
@@ -143,7 +143,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_8">
@@ -158,7 +158,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_9">
@@ -173,7 +173,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
           <div class="product-book-shop" id="im_10">
@@ -188,7 +188,7 @@
               <a href="#">Business</a>
             </span>
             <span class="price">100.000VND</span>
-            <a href="#add-to-cart" class="button">Thêm vào giỏ hàng</a>
+            <a href="#add-to-cart" class="button" onclick="addcart()">Thêm vào giỏ hàng</a>
           </div>
           </div>
         </div>
@@ -234,5 +234,16 @@
         Copyright 2019 © Internet
       </div>
     </footer>
+    <script type="text/javascript">
+      function addcart(){
+        var abc = confirm("bạn có chắc muốn thêm giỏ hàng?");
+        if (abc==true) {
+          alert("thêm giỏ hàng thành công, xin tiếp tục mua hàng");
+        }
+        else {
+          alert("Xin chọn sản phẩm");
+        }
+      }
+    </script>
   </body>
 </html>
