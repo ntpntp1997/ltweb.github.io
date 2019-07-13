@@ -130,7 +130,7 @@ var soloKanbanniang = {
 
     $('#soloKanbanniangChange').click(function() {
       loadlive2d('soloKanbanniang', Label.servePath +
-          '/plugins/kanbanniang/assets/model?t=' + (new Date()).getTime(),
+          'live2d/model?t=' + (new Date()).getTime(),
           soloKanbanniang.showMessage('我的新衣服好看嘛', 3000, true));
     });
 
@@ -147,96 +147,5 @@ var soloKanbanniang = {
       window.Live2D.captureName = 'solo.png';
       window.Live2D.captureFrame = true;
     });
-  },
-  _initFirstMsg: function() {
-    var text;
-    var referrer = document.createElement('a');
-    if (document.referrer !== '') {
-      referrer.href = document.referrer;
-    }
-
-    if (referrer.href !== '' && referrer.hostname !==
-        Label.servePath.split('//')[1].split(':')[0]) {
-      var referrer = document.createElement('a');
-      referrer.href = document.referrer;
-      text = 'Hello! 来自 <span style="color:#4285f4;">' + referrer.hostname +
-          '</span> 的朋友';
-      var domain = referrer.hostname.split('.')[1];
-      if (domain == 'baidu') {
-        text = 'Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style="color:#4285f4;">' +
-            referrer.search.split('&wd=')[1].split('&')[0] + '</span> 找到的我吗？';
-      } else if (domain == 'so') {
-        text = 'Hello! 来自 360搜索 的朋友<br>你是搜索 <span style="color:#4285f4;">' +
-            referrer.search.split('&q=')[1].split('&')[0] + '</span> 找到的我吗？';
-      } else if (domain == 'google') {
-        text = 'Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style="color:#4285f4;">『' +
-            document.title.split(' - ')[0] + '』</span>';
-      }
-    } else {
-      var now = (new Date()).getHours();
-      if (now > 23 || now <= 5) {
-        text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛';
-      } else if (now > 5 && now <= 7) {
-        text = '早上好！一日之计在于晨，美好的一天就要开始了';
-      } else if (now > 7 && now <= 11) {
-        text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
-      } else if (now > 11 && now <= 14) {
-        text = '中午了，工作了一个上午，现在是午餐时间！';
-      } else if (now > 14 && now <= 17) {
-        text = '午后很容易犯困呢，今天的运动目标完成了吗？';
-      } else if (now > 17 && now <= 19) {
-        text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~';
-      } else if (now > 19 && now <= 21) {
-        text = '晚上好，今天过得怎么样？';
-      } else if (now > 21 && now <= 23) {
-        text = '已经这么晚了呀，早点休息吧，晚安~';
-      } else {
-        text = '嗨~ 快来逗我玩吧！';
-      }
-    }
-    soloKanbanniang.showMessage(text, 6000);
-  },
-  init: function() {
-    this._initTips();
-    this._initMenu();
-    this._initFirstMsg();
-    this._initMove();
-    window.setInterval(soloKanbanniang.showChat, 30000);
-
-    $(document).on('copy', function() {
-      soloKanbanniang.showMessage('你都复制了些什么呀，转载要记得加上出处哦', 5000, true);
-    });
-  },
-  showChat: function () {
-    $.getJSON(
-        'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
-        function(result) {
-          soloKanbanniang.showMessage(result.hitokoto, 5000);
-        });
   }
 };
-
-if (navigator.userAgent.indexOf('MSIE') === -1 && $(window).width() > 720) {
-    $(document).ready(function () {
-        if (sessionStorage.getItem('soloKanbanniang') === 'close') {
-            $('.solo-kanbanniang').remove();
-            return;
-        }
-
-        $.ajax({
-            url: 'live2d.js',
-            dataType: "script",
-            cache: true,
-            success: function () {
-                soloKanbanniang.init();
-
-                loadlive2d('soloKanbanniang', Label.servePath +
-                    '/plugins/kanbanniang/assets/model?t=' + (new Date()).getTime());
-            }
-        });
-    });
-} else {
-    $(document).ready(function () {
-        $('.solo-kanbanniang').remove()
-    })
-}
