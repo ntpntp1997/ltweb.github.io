@@ -6,7 +6,7 @@
         },
         {
             "selector": ".searchbox",
-            "text": ["在找什么东西呢，需要帮忙吗？"]
+            "text": ["Tìm kiếm một cái gì đó, cần giúp đỡ？"]
         }
     ],
     "click": [
