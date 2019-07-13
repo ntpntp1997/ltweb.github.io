@@ -128,5 +128,111 @@
 <script type="text/javascript">
     loadlive2d("live2d", "live2d/model/tia/model.json");
 </script>
+<script>
+    function mGetDate(year, month) {
+
+        var d = new Date(year, month, 0);
+        return d.getDate();
+    }
+
+    function numberToChinese(num) {
+        var chineseNum = '零一二三四五六七八九十';
+        var chinese = '';
+        if (num <= 10) {
+            return chineseNum.split('')[num]
+        } else if (num < 20) {
+            return '十' + chineseNum.split('')[num - 10]
+        } else {
+            if (num % 10 == 0) {
+                return chineseNum.split('')[num / 10] + '十'
+            } else {
+                return chineseNum.split('')[parseInt(num / 10)] + '十' + chineseNum.split('')[parseInt(num % 10)]
+            }
+        }
+
+    }
+
+    var myDate = new Date();
+    var month = document.getElementById('month');
+    var day = document.getElementById('day');
+    var week = document.getElementById('week');
+    var hour = document.getElementById('hour');
+    var minute = document.getElementById('minute');
+    var second = document.getElementById('second');
+    var html = ``;
+    // 生成月html
+    for (var i = 0; i < 12; i++) {
+        html += `<li>` + numberToChinese(i + 1) + `月</li>`
+    }
+    month.innerHTML = html;
+
+    //  生成日html
+    var months = myDate.getMonth() + 1;   //月份从0开始获取，所以需要加1
+    var year = myDate.getYear();
+    var d = new Date(year, months, 0);
+    var days = d.getDate();
+    html = ``
+    for (i = 0; i < days; i++) {
+        html += `<li>` + numberToChinese(i + 1) + `日</li>`
+    }
+    day.innerHTML = html;
+
+    // 星期html
+    html = ``
+    for (i = 0; i < 7; i++) {
+        if (i == 6) {
+            html += `<li>星期日</li>`
+        } else {
+            html += `<li>星期` + numberToChinese(i + 1) + `</li>`
+        }
+    }
+    week.innerHTML = html;
+
+    // 时html
+    html = ``
+    for (i = 0; i < 24; i++) {
+        html += `<li>` + numberToChinese(i) + `时</li>`
+    }
+    hour.innerHTML = html;
+    //分html
+    html = ``
+    for (i = 0; i < 60; i++) {
+        html += `<li>` + numberToChinese(i) + `分</li>`
+    }
+    minute.innerHTML = html;
+    //秒html
+    html = ``
+    for (i = 0; i < 60; i++) {
+        html += `<li>` + numberToChinese(i) + `秒</li>`
+    }
+    second.innerHTML = html;
+
+
+    function setTime() {
+        // 获取当前时间
+        var myDate = new Date();
+        var numArray = [myDate.getMonth() + 1, myDate.getDate(), myDate.getDay(), myDate.getHours() + 1, myDate.getMinutes() + 1, myDate.getSeconds() + 1];// 月,日,星期,时,分,秒
+
+        var l = 6;
+        // 遍历ul实现时间赋值与更改
+        $("ul").each(function () {
+            let length = $(this).children().length
+            for (let j = 0; j < length; j++) {
+                let deg = "rotate(" + (j + 1 - numArray[6 - l]) * 360 / length + "deg)"
+                $(this).find("li").eq(j).css("transform", deg);
+                if (j + 1 - numArray[6 - l] == 0 || (l == 4 && j == length - 1 && numArray[6 - l] == 0)) {
+
+                    $(this).find("li").eq(j).css("color", "#fff");
+                } else {
+                    $(this).find("li").eq(j).css("color", "#777");
+                }
+            }
+            l--;
+        })
+    }
+
+    setTime()
+    window.setInterval("setTime()", 1000);
+</script>
 </body>
 </html>
