@@ -2,7 +2,7 @@
     "mouseover": [
         {
             "selector": ".title a",
-            "text": ["要看看 {text} 么？"]
+            "text": ["Xem nào. Đó có phải là {text}？"]
         },
         {
             "selector": ".searchbox",
