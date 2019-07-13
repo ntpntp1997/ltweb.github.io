@@ -1,7 +1,7 @@
-var soloKanbanniang = {
+var live2d = {
   clearTime: '',
   showMessage: function(text, timeout) {
-    if (sessionStorage.getItem('soloKanbanniang') === 'close') {
+    if (sessionStorage.getItem('live2d') === 'close') {
       return;
     }
     if (Array.isArray(text)) {
@@ -14,11 +14,11 @@ var soloKanbanniang = {
     }, timeout);
   },
   _initMove: function () {
-    if (sessionStorage.soloKanbanniangX) {
-      $('.solo-kanbanniang').css('left', sessionStorage.soloKanbanniangX + 'px')
+    if (sessionStorage.live2dX) {
+      $('.solo-kanbanniang').css('left', sessionStorage.live2dX + 'px')
     }
-    if (sessionStorage.soloKanbanniangY) {
-      $('.solo-kanbanniang').css('top', sessionStorage.soloKanbanniangY + 'px')
+    if (sessionStorage.live2dY) {
+      $('.solo-kanbanniang').css('top', sessionStorage.live2dY + 'px')
     }
     $('.solo-kanbanniang').mousedown(function(event) {
       var _document = document;
@@ -58,8 +58,8 @@ var soloKanbanniang = {
         }
         dialog.style.left = positionX + "px";
         dialog.style.top = positionY + "px";
-        sessionStorage.setItem('soloKanbanniangX', positionX);
-        sessionStorage.setItem('soloKanbanniangY', positionY);
+        sessionStorage.setItem('live2dX', positionX);
+        sessionStorage.setItem('live2dY', positionY);
       };
 
       _document.onmouseup = function() {
@@ -84,7 +84,7 @@ var soloKanbanniang = {
       success: function(result) {
         $.each(result.mouseover, function(index, tips) {
           $(document).on('mouseover', tips.selector, function() {
-            soloKanbanniang.showMessage(
+            live2d.showMessage(
                 tips.text.replace('{text}', $.trim($(this).text()).substr(0, 42)), 3000);
           });
         });
@@ -92,7 +92,7 @@ var soloKanbanniang = {
           $(document).on('click', tips.selector, function() {
             var text = tips.text[Math.floor(Math.random() * tips.text.length +
                 1) - 1];
-            soloKanbanniang.showMessage(text, 3000, true);
+            live2d.showMessage(text, 3000, true);
           });
         });
         $.each(result.seasons, function(index, tips) {
@@ -104,7 +104,7 @@ var soloKanbanniang = {
               now.getMonth() + 1 <= before.split('/')[0]) &&
               (after.split('/')[1] <= now.getDate() &&
                   now.getDate() <= before.split('/')[1])) {
-            soloKanbanniang.showMessage(
+            live2d.showMessage(
                 tips.text.replace('{year}', now.getFullYear()), 6000, true);
           }
         });
@@ -112,38 +112,38 @@ var soloKanbanniang = {
     });
   },
   _initMenu: function() {
-    $('#soloKanbanniangHome').click(function() {
+    $('#live2dHome').click(function() {
       window.location = Label.servePath;
     });
 
-    $('#soloKanbanniangRSS').click(function() {
+    $('#live2dRSS').click(function() {
       window.location = Label.servePath + '/rss.xml';
     });
 
-    $('#soloKanbanniangGithub').click(function() {
+    $('#live2dGithub').click(function() {
       window.location = 'https://github.com/b3log/solo';
     });
 
-    $('#soloKanbanniangChat').click(function() {
-      soloKanbanniang.showChat();
+    $('#live2dChat').click(function() {
+      live2d.showChat();
     });
 
-    $('#soloKanbanniangChange').click(function() {
-      loadlive2d('soloKanbanniang', Label.servePath +
+    $('#live2dChange').click(function() {
+      loadlive2d('live2d', Label.servePath +
           'live2d/model?t=' + (new Date()).getTime(),
-          soloKanbanniang.showMessage('我的新衣服好看嘛', 3000, true));
+          live2d.showMessage('我的新衣服好看嘛', 3000, true));
     });
 
-    $('#soloKanbanniangClose').click(function() {
-      soloKanbanniang.showMessage('愿你有一天能与重要的人重逢', 1300, true);
-      sessionStorage.setItem('soloKanbanniang', 'close');
+    $('#live2dClose').click(function() {
+      live2d.showMessage('愿你有一天能与重要的人重逢', 1300, true);
+      sessionStorage.setItem('live2d', 'close');
       window.setTimeout(function() {
         $('.solo-kanbanniang').hide();
       }, 1300);
     });
 
-    $('#soloKanbanniangPhoto').click(function() {
-      soloKanbanniang.showMessage('照好了嘛，是不是很可爱呢？', 5000, true);
+    $('#live2dPhoto').click(function() {
+      live2d.showMessage('照好了嘛，是不是很可爱呢？', 5000, true);
       window.Live2D.captureName = 'solo.png';
       window.Live2D.captureFrame = true;
     });
