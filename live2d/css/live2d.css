@@ -14,6 +14,7 @@
     padding: 7px;
     top: -80px;
     left: -10px;
+    color:#FFF;
     text-align: center;
     border: 1px solid rgba(255,137,255,.4);
     border-radius: 12px;
@@ -42,6 +43,7 @@
     /* padding: 4px; */
     width: 60px;
     height: 20px;
+    color:#FFF;
     border: 1px solid rgba(255,137,255,.4);
     border-radius: 12px;
     background: rgba(255,137,255,.2);
