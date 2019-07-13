@@ -63,7 +63,7 @@ initTips();
     if(document.referrer !== ''){
         var referrer = document.createElement('a');
         referrer.href = document.referrer;
-        text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+        text = 'Này! đây là từ<span style="color:#0099cc;">' + referrer.hostname + '</span>！';
         var domain = referrer.hostname.split('.')[1];
         if (domain == 'baidu') {
             text = 'Này! Bạn bè từ tìm kiếm của Baidu! <br> Chào mừng bạn đến thăm<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
