@@ -230,7 +230,7 @@ if (navigator.userAgent.indexOf('MSIE') === -1 && $(window).width() > 720) {
             success: function () {
                 soloKanbanniang.init();
 
-                loadlive2d('soloKanbanniang',Label.servePath +
+                loadlive2d('soloKanbanniang',
                     '/plugins/kanbanniang/assets/model?t=' + (new Date()).getTime());
             }
         });
