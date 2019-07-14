@@ -231,7 +231,7 @@ if (navigator.userAgent.indexOf('MSIE') === -1 && $(window).width() > 720) {
                 soloKanbanniang.init();
 
                 loadlive2d('soloKanbanniang',
-                    '/plugins/kanbanniang/assets/model/bilibili-live/22';
+                    '/plugins/kanbanniang/assets/model/bilibili-live/22');
             }
         });
     });
