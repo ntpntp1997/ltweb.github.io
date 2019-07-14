@@ -1,5 +1,5 @@
 {
-	"model": "model/KantaiCollection/murakumo/model.moc",
+	"model": "model.moc",
 	"textures": [
 		"https://cdn.jsdelivr.net/npm/kanbanniang/model/KantaiCollection/murakumo/textures.1024/00.png"
 	],

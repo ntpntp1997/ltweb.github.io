@@ -231,7 +231,7 @@ if (navigator.userAgent.indexOf('MSIE') === -1 && $(window).width() > 720) {
                 soloKanbanniang.init();
 
                 loadlive2d('soloKanbanniang',
-                    'plugins/kanbanniang/assert/model?t=' + (new Date()).getTime());
+                    'plugins/kanbanniang/assert/model/KantaiCollection/murakumo');
             }
         });
     });
