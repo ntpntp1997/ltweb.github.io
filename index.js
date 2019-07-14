@@ -79,7 +79,7 @@ var soloKanbanniang = {
   _initTips: function() {
     $.ajax({
       cache: true,
-      url: 'https://ntpntp1997.github.io/ltweb.github.io/plugins/kanbanniang/assert/tips.json',
+      url: 'https://cdn.jsdelivr.net/npm/kanbanniang/tips.json',
       dataType: 'json',
       success: function(result) {
         $.each(result.mouseover, function(index, tips) {
