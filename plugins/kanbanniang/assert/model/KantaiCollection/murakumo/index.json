@@ -3,7 +3,7 @@
 	"textures": [
 		"https://cdn.jsdelivr.net/npm/kanbanniang/model/KantaiCollection/murakumo/textures.1024/00.png"
 	],
-	"physics": "model/KantaiCollection/murakumo/physics.json",
+	"physics": "murakumo/physics.json",
 	"layout": {
 		"center_x": 0,
 		"center_y": 0,
