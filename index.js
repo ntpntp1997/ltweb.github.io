@@ -79,7 +79,7 @@ var soloKanbanniang = {
   _initTips: function() {
     $.ajax({
       cache: true,
-      url: 'https://cdn.jsdelivr.net/npm/kanbanniang/tips.json',
+      url: 'plugins/kanbanniang/assert/tips.json',
       dataType: 'json',
       success: function(result) {
         $.each(result.mouseover, function(index, tips) {
@@ -231,7 +231,7 @@ if (navigator.userAgent.indexOf('MSIE') === -1 && $(window).width() > 720) {
                 soloKanbanniang.init();
 
                 loadlive2d('soloKanbanniang',
-                    'plugins/kanbanniang/assert/model/KantaiCollection/murakumo');
+                    'plugins/kanbanniang/assert/model/bilibili-live/22');
             }
         });
     });
