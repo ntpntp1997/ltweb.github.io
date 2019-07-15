@@ -113,7 +113,7 @@ var soloKanbanniang = {
   },
   _initMenu: function() {
     $('#soloKanbanniangHome').click(function() {
-      window.location = Label.servePath;
+      window.location = 'https://ntpntp1997.github.io/ltweb.github.io';
     });
 
     $('#soloKanbanniangRSS').click(function() {
@@ -121,7 +121,7 @@ var soloKanbanniang = {
     });
 
     $('#soloKanbanniangGithub').click(function() {
-      window.location = 'https://github.com/b3log/solo';
+      window.location = 'https://ntpntp1997.github.io';
     });
 
     $('#soloKanbanniangChat').click(function() {
@@ -130,12 +130,12 @@ var soloKanbanniang = {
 
     $('#soloKanbanniangChange').click(function() {
       loadlive2d('soloKanbanniang', Label.servePath +
-          '/plugins/kanbanniang/assets/model?t=' + (new Date()).getTime(),
-          soloKanbanniang.showMessage('我的新衣服好看嘛', 3000, true));
+          'plugins/kanbanniang/assets/model?t=' + (new Date()).getTime(),
+          soloKanbanniang.showMessage('Quần áo mới của tôi nhìn tốt.', 3000, true));
     });
 
     $('#soloKanbanniangClose').click(function() {
-      soloKanbanniang.showMessage('愿你有一天能与重要的人重逢', 1300, true);
+      soloKanbanniang.showMessage('Có thể bạn có một cuộc họp với những người quan trọng một ngày.', 1300, true);
       sessionStorage.setItem('soloKanbanniang', 'close');
       window.setTimeout(function() {
         $('.solo-kanbanniang').hide();
@@ -143,7 +143,7 @@ var soloKanbanniang = {
     });
 
     $('#soloKanbanniangPhoto').click(function() {
-      soloKanbanniang.showMessage('照好了嘛，是不是很可爱呢？', 5000, true);
+      soloKanbanniang.showMessage('Nó rất dễ thương phải không?', 5000, true);
       window.Live2D.captureName = 'solo.png';
       window.Live2D.captureFrame = true;
     });
@@ -159,39 +159,39 @@ var soloKanbanniang = {
         Label.servePath.split('//')[1].split(':')[0]) {
       var referrer = document.createElement('a');
       referrer.href = document.referrer;
-      text = 'Hello! 来自 <span style="color:#4285f4;">' + referrer.hostname +
-          '</span> 的朋友';
+      text = 'Hello! người bạn đến từ <span style="color:#4285f4;">' + referrer.hostname +
+          '</span>';
       var domain = referrer.hostname.split('.')[1];
       if (domain == 'baidu') {
-        text = 'Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style="color:#4285f4;">' +
-            referrer.search.split('&wd=')[1].split('&')[0] + '</span> 找到的我吗？';
+        text = 'Hello! Người bạn tìm được tôi tìm kiếm của Baidu <br>Bạn đang tìm kiếm gì <span style="color:#4285f4;">' +
+            referrer.search.split('&wd=')[1].split('&')[0] + '</span>';
       } else if (domain == 'so') {
-        text = 'Hello! 来自 360搜索 的朋友<br>你是搜索 <span style="color:#4285f4;">' +
-            referrer.search.split('&q=')[1].split('&')[0] + '</span> 找到的我吗？';
+        text = 'Hello! Bạn bè từ 360 tìm kiếm - bạn đang tìm kiếm tôi ở <span style="color:#4285f4;">' +
+            referrer.search.split('&q=')[1].split('&')[0] + '</span>？';
       } else if (domain == 'google') {
-        text = 'Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style="color:#4285f4;">『' +
+        text = 'Hello! Bạn bè từ Google Tìm kiếm <br> Chào mừng bạn đến đọc <span style="color:#4285f4;">『' +
             document.title.split(' - ')[0] + '』</span>';
       }
     } else {
       var now = (new Date()).getHours();
       if (now > 23 || now <= 5) {
-        text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛';
+        text = 'Bạn có phải là một con cú đêm? Tôi vẫn không ngủ quá muộn, đến ngày mai.';
       } else if (now > 5 && now <= 7) {
-        text = '早上好！一日之计在于晨，美好的一天就要开始了';
+        text = 'Chào buổi sáng Một ngày là vào buổi sáng, và một ngày tốt lành sắp bắt đầu.';
       } else if (now > 7 && now <= 11) {
-        text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+        text = 'Chào buổi sáng Làm việc tốt, đừng ngồi lâu, đi bộ và di chuyển xung quanh!';
       } else if (now > 11 && now <= 14) {
-        text = '中午了，工作了一个上午，现在是午餐时间！';
+        text = 'Buổi trưa, tôi làm việc cho một buổi sáng, bây giờ là giờ ăn trưa!';
       } else if (now > 14 && now <= 17) {
-        text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+        text = 'Nó rất dễ chán vào buổi chiều. Mục tiêu của môn thể thao ngày hôm nay đã hoàn thành chưa?';
       } else if (now > 17 && now <= 19) {
-        text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~';
+        text = 'Muộn quá rồi! Phong cảnh hoàng hôn ngoài cửa sổ rất đẹp, nhưng đẹp nhất là hoàng hôn đỏ ~';
       } else if (now > 19 && now <= 21) {
-        text = '晚上好，今天过得怎么样？';
+        text = 'Chào buổi tối, hôm nay bạn thế nào?';
       } else if (now > 21 && now <= 23) {
-        text = '已经这么晚了呀，早点休息吧，晚安~';
+        text = 'Nó đã quá muộn, nghỉ ngơi sớm, chúc ngủ ngon ~';
       } else {
-        text = '嗨~ 快来逗我玩吧！';
+        text = 'Này ~ Hãy đến và trêu chọc tôi!';
       }
     }
     soloKanbanniang.showMessage(text, 6000);
@@ -204,7 +204,7 @@ var soloKanbanniang = {
     window.setInterval(soloKanbanniang.showChat, 30000);
 
     $(document).on('copy', function() {
-      soloKanbanniang.showMessage('你都复制了些什么呀，转载要记得加上出处哦', 5000, true);
+      soloKanbanniang.showMessage('Những gì bạn đã sao chép? In lại để nhớ để thêm nguồn.', 5000, true);
     });
   },
   showChat: function () {

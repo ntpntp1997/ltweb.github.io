@@ -2,47 +2,47 @@
     "mouseover": [
         {
             "selector": "a[href^='http']",
-            "text": "要看看 <span style=\"color:#4285f4;\">{text}</span> 么？"
+            "text": "Hình như là <span style=\"color:#4285f4;\">{text}</span> phải không？"
         },
         {
             "selector": "#soloKanbanniangRSS",
-            "text": "喜欢我也要喜欢我的主人哦，记得点击<span style=\"color:#4285f4;\">订阅</span>！"
+            "text": "Giống như tôi, tôi cũng thích chủ sở hữu của tôi, nhớ nhấp vào <span style=\"color:#4285f4;\">Theo dõi</span>！"
         },
         {
             "selector": "#soloKanbanniangHome",
-            "text": "点击前往<span style=\"color:#4285f4;\">首页</span>，想回到上一页可以使用浏览器的后退功能哦"
+            "text": "Bấm để đi<span style=\"color:#4285f4;\">Trang chủ</span>，Tôi muốn quay lại trang trước và sử dụng chức năng quay lại của trình duyệt."
         },
         {
             "selector": "#soloKanbanniangChat",
-            "text": "猜猜我要说些什么"
+            "text": "Đoán xem tôi muốn nói gì"
         },
         {
             "selector": "textarea",
-            "text": "认真填写哦，垃圾评论是禁止事项"
+            "text": "Viết cẩn thận, bình luận spam bị cấm"
         },
         {
             "selector": "#soloKanbanniangChange",
-            "text": "喜欢换装PLAY吗？"
+            "text": "Bạn có muốn thay đổi  ?"
         },
         {
             "selector": "#soloKanbanniangClose",
-            "text": "到了要说再见的时候了吗"
+            "text": "Đã đến lúc nói lời tạm biệt?"
         },
         {
             "selector": "#soloKanbanniangPhoto",
-            "text": "你要给我拍照呀，一二三~茄子~~"
+            "text": "Bạn phải chụp ảnh tôi, một hai ba ~ cà tím ~.~"
         },
         {
             "selector": "#soloKanbanniang",
-            "text": "鼠…鼠标放错地方了！"
+            "text": "Chuột ... Chuột ở sai vị trí!"
         },
         {
             "selector": "#soloKanbanniangGithub",
-            "text": "给颗小星星奖励一下我吧🌟"
+            "text": "Hãy cho tôi một ngôi sao nhỏ thưởng cho tôi🌟"
         },
         {
             "selector": "#soloKanbanniangRSS",
-            "text": "喜欢我就快点击<span style=\"color:#4285f4;\">订阅</span>我的主人哦"
+            "text": "Giống như tôi, chỉ cần nhấp <span style=\"color:#4285f4;\">Theo dõi</span> Chủ của tôi"
         }
     ],
     "click": [
