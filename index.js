@@ -156,7 +156,7 @@ var soloKanbanniang = {
     }
 
     if (referrer.href !== '' && referrer.hostname !==
-        Label.servePath.split('//')[1].split(':')[0]) {
+        'https://ntpntp1997.github.io/ltweb.github.io/'.split('//')[1].split(':')[0]) {
       var referrer = document.createElement('a');
       referrer.href = document.referrer;
       text = 'Hello! người bạn đến từ <span style="color:#4285f4;">' + referrer.hostname +
