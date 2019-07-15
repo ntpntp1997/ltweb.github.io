@@ -43,12 +43,20 @@
         {
             "selector": "#soloKanbanniangRSS",
             "text": "Giống như tôi, chỉ cần nhấp <span style=\"color:#4285f4;\">Theo dõi</span> Chủ của tôi"
+        },
+	{
+            "selector": ".title a h1 h2 h3 ",
+            "text": ["Xem nào. Đó có phải là {text}？"]
+        },
+        {
+            "selector": ".searchbox",
+            "text": ["Tìm kiếm một cái gì đó, cần giúp đỡ？"]
         }
     ],
     "click": [
         {
             "selector": "#soloKanbanniang",
-            "text": ["是…是不小心碰到了吧", "萝莉控是什么呀", "你看到我的小熊了吗", "再摸的话我可要报警了！⌇●﹏●⌇", "110吗，这里有个变态一直在摸我(ó﹏ò｡)"]
+            "text": ["Đừng di chuyển bàn tay của bạn! Bỏ tay ra ~ ~", "Thực sự ... thực sự không biết xấu hổ!","Hentai！", "Nếu bạn chạm vào nó một lần nữa, tôi phải gọi cảnh sát!⌇●﹏●⌇", "113? Có một sự biến thái ở đây đã chạm vào tôi.(ó﹏ò｡)"]
         }
     ],
     "seasons": [
