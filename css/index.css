@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Judson&display=swap');
 .solo-kanbanniang {
     position: fixed;
     bottom: 0;
@@ -36,6 +37,7 @@
 }
 
 .solo-kanbanniang__tip {
+    font-family: 'Judson', serif;
     opacity: 0;
     width: 260px;
     margin: 0 10px;
