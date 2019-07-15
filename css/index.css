@@ -55,7 +55,7 @@
     animation-name: kanbanniangshake;
     animation-timing-function: ease-in-out;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, .54);
+    color: rgba(0, 0, 0, .96);
 }
 
 @keyframes kanbanniangshake {
