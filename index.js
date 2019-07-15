@@ -105,7 +105,7 @@ var soloKanbanniang = {
               (after.split('/')[1] <= now.getDate() &&
                   now.getDate() <= before.split('/')[1])) {
             soloKanbanniang.showMessage(
-                tips.text.replace('{year}', now.getFullYear()), 6000, true);
+                tips.text.toString().replace('{year}', now.getFullYear()), 6000, true);
           }
         });
       }
