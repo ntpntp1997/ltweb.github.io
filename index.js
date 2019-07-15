@@ -207,20 +207,11 @@ var soloKanbanniang = {
     });
   },
   showChat: function () {
-   // $.getJSON(
-   //     'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
-    //    function(result) {
-     //     soloKanbanniang.showMessage('Tớ thích cậu ！⌇●﹏●⌇', 5000);
-$.ajax({
-      cache: true,
-      url: 'https://ntpntp1997.github.io/ltweb.github.io/plugins/kanbanniang/assert/tips.json',
-      dataType: 'json',
-      success: function(result, tips){
-            $(document).on('click', tips.selector, function() {
-            var text = tips.text[Math.floor(Math.random() * tips.text.length +
-                1) - 1];
-            soloKanbanniang.showMessage(text, 3000, true);
-      //  });
+    $.getJSON(
+        'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
+        function(result) {
+          soloKanbanniang.showMessage('Tớ thích cậu ！⌇●﹏●⌇', 5000);
+     });
   }
 };
 
