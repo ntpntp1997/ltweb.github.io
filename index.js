@@ -210,7 +210,7 @@ var soloKanbanniang = {
     $.getJSON(
         'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
         function(result) {
-          soloKanbanniang.showMessage(result.'Nếu tôi có thể được sinh ra một lần nữa, tôi nghĩ, tôi muốn trở thành một con sứa. Tôi muốn trở thành một con sứa chỉ biết tự do đung đưa trên biển.', 5000);
+          soloKanbanniang.showMessage(result.hitokoto, 5000);
         });
   }
 };
