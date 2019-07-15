@@ -210,7 +210,15 @@ var soloKanbanniang = {
     $.getJSON(
         'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
         function(result) {
-          soloKanbanniang.showMessage('Tớ thích cậu ！⌇●﹏●⌇', 5000);
+	var valuekey = Math.random( );
+	if(valuekey<=0.25){
+          soloKanbanniang.showMessage('Tớ thích cậu ！⌇●﹏●⌇', 5000);}
+	else if(valuekey>=0.25 && valuekey<=0.5){
+          soloKanbanniang.showMessage('Ai ni o！⌇●.●⌇', 5000);}
+	else if(valuekey>=0.5 && valuekey<=0.75){
+          soloKanbanniang.showMessage('Baka Baka ！~.~', 5000);}
+	else if(valuekey>=0.75){
+          soloKanbanniang.showMessage('Trong tình yêu, kẻ nào yêu trước kẻ đó thua cuộc. ！⌇●﹏●⌇', 5000);}
      });
   }
 };
