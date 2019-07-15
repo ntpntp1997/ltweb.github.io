@@ -129,8 +129,7 @@ var soloKanbanniang = {
     });
 
     $('#soloKanbanniangChange').click(function() {
-      loadlive2d('soloKanbanniang', Label.servePath +
-          'plugins/kanbanniang/assets/model?t=' + (new Date()).getTime(),
+      loadlive2d('soloKanbanniang', 'plugins/kanbanniang/assets/model?t=' + (new Date()).getTime(),
           soloKanbanniang.showMessage('Quần áo mới của tôi nhìn tốt.', 3000, true));
     });
 
@@ -209,9 +208,9 @@ var soloKanbanniang = {
   },
   showChat: function () {
     $.getJSON(
-        'Nếu tôi có thể được sinh ra một lần nữa, tôi nghĩ, tôi muốn trở thành một con sứa. Tôi muốn trở thành một con sứa chỉ biết tự do đung đưa trên biển.',
+        'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
         function(result) {
-          soloKanbanniang.showMessage(result.hitokoto, 5000);
+          soloKanbanniang.showMessage(result.'Nếu tôi có thể được sinh ra một lần nữa, tôi nghĩ, tôi muốn trở thành một con sứa. Tôi muốn trở thành một con sứa chỉ biết tự do đung đưa trên biển.', 5000);
         });
   }
 };
