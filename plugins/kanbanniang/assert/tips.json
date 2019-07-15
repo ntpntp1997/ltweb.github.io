@@ -48,8 +48,20 @@
             "selector": ".title a h1 h2 h3 ",
             "text": ["Xem nào. Đó có phải là {text}？"]
         },
+	{
+            "selector": "h3 ",
+            "text": ["Xem nào. Đó có phải là {text}？"]
+        },
+	{
+            "selector": "h2",
+            "text": ["Xem nào. Đó có phải là {text}？"]
+        },
+	{
+            "selector": "h1",
+            "text": ["Xem nào. Đó có phải là {text}？"]
+        },
         {
-            "selector": ".searchbox",
+            "selector": ".search-input",
             "text": ["Tìm kiếm một cái gì đó, cần giúp đỡ？"]
         }
     ],
