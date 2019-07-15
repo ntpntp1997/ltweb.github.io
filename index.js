@@ -231,7 +231,7 @@ if (navigator.userAgent.indexOf('MSIE') === -1 && $(window).width() > 720) {
         }
 
         $.ajax({
-            url: 'https://cdn.jsdelivr.net/npm/kanbanniang@0.1.6/live2d.js',
+            url: 'js/live2d.js',
             dataType: "script",
             cache: true,
             success: function () {
