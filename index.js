@@ -210,7 +210,7 @@ var soloKanbanniang = {
     $.getJSON(
         'https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json',
         function(result) {
-          soloKanbanniang.showMessage(result.hitokoto, 5000);
+          soloKanbanniang.showMessage('Tớ thích cậu ！⌇●﹏●⌇', 5000);
         });
   }
 };
