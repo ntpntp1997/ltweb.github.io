@@ -5,6 +5,7 @@
     left: 0;
     height: 250px;
     cursor: move;
+    z-index:99999;
 }
 
 .solo-kanbanniang:hover .solo-kanbanniang__tool {
